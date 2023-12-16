@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>news</title>
+    <style type="text/css">
+        body {
+            font: 16px/1.5 'Arial', 'Microsoft Yahei';
+        }
+        .outer {
+            border: 1px solid red;
+            margin: 0 auto;
+            width: 500px;
+            height: 400px;
+        }
+        .first {
+            width: 200px;
+            height: 200px;
+            background-color: #a3c3f3;
+            float: left;
+        }
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: #a3f3c3;
+            float: right;
+        }
+        .second .in1 {
+            width: 50px;
+            height: 50px;
+            background-color: #f3a3c3;
+            float: left;
+        }
+        .second .in2 {
+            width: 50px;
+            height: 50px;
+            background-color: #c3a3f3;
+            float: right;
+        }
+
+        .third {
+            width: 100px;
+            height: 100px;
+            background-color: lightpink;
+        }
+
+        .product-list {
+            margin: 0 auto;
+        }
+
+        .product {
+            width: 250px;
+            height: 300px;
+            background-color: #fff;
+            margin-left: 10px;
+            float: left;
+        }
+        .product img {
+            width: 100%;
+        }
+        .product .review {
+            height: 50px;
+            overflow: hidden;
+            padding: 0 15px;
+            margin-top: 15px;
+        }
+        .product .review-from {
+            color: gray;
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+        .product .info {
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+        .product .info span {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <p></p>
+    <div class="outer">
+        <div class="first"></div>
+        <div class="second">
+            <div class="in1"></div>
+            <div class="in2"></div>
+        </div>
+
+    </div>
+
+
+    <div class="product-list">
+        <div class="third">before float</div>
+        <div class="product">
+            <img src="../images/sunflower.jpg" />
+            <p class="review">review</p>
+            <p class="review-from">review-from</p>
+            <div class="info">
+                <span>infoinfoinfoinfo</span>
+                <em>|</em>
+                <strong>9.9</strong>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="../images/sunflower.jpg" />
+            <p class="review">他做出了一个让人非常难以理解的举动：从银行离职，到互联网去，从零开始！有些不幸的是，从银行离开后，恰遇2000年的互联网经济泡沫，很多公司相继倒闭。这让陈皓很是受挫，不过也挑起了他的斗志。</p>
+            <p class="review-from">review-from</p>
+            <div class="info">
+                <span>infoinfoinfoinfo</span>
+                <em>|</em>
+                <strong>9.9</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="third">after float</div>
+
+</body>
+</html>
