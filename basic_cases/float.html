@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <title>news</title>
+    <title>float</title>
     <style type="text/css">
         body {
             font: 16px/1.5 'Arial', 'Microsoft Yahei';
@@ -53,7 +53,7 @@
             width: 250px;
             height: 300px;
             background-color: #fff;
-            margin-left: 10px;
+            margin: 10px;
             float: left;
         }
         .product img {
@@ -78,6 +78,12 @@
             font-size: 16px;
         }
 
+        .floatfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
     </style>
 </head>
 <body>
@@ -92,7 +98,7 @@
     </div>
 
 
-    <div class="product-list">
+    <div class="product-list floatfix">
         <div class="third">before float</div>
         <div class="product">
             <img src="../images/sunflower.jpg" />
