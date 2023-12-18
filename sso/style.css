@@ -2,3 +2,39 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    font: 16px 'Arial', 'Microsoft Yahei';
+}
+li {
+    list-style: none;
+}
+
+.cs {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    height: 42px;
+    margin: 30px auto;
+    background-color: lightgray;
+}
+
+.header .logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+    background-color: lightblue;
+}
+.header .nav {
+    float: left;
+    line-height: 42px;
+}
+.header .nav li {
+    display: inline-block;
+}
+
+.header .nav li a {
+    text-decoration: none;
+    color: black;
+}
