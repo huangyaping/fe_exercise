@@ -9,6 +9,9 @@ body {
 li {
     list-style: none;
 }
+a {
+    text-decoration: none;
+}
 
 .cs {
     width: 1200px;
@@ -28,13 +31,21 @@ li {
 }
 .header .nav {
     float: left;
-    line-height: 42px;
+/*    line-height: 42px;*/
 }
 .header .nav li {
-    display: inline-block;
+    float: left;
 }
 
 .header .nav li a {
-    text-decoration: none;
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    margin: 0 10px;
+    font-size: 18px;
     color: black;
+}
+
+.header .nav li a:hover {
+    border-bottom: 1px solid green;
 }
