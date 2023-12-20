@@ -5,6 +5,7 @@
 
 body {
     font: 16px 'Arial', 'Microsoft Yahei';
+    background-color: lightgray;
 }
 li {
     list-style: none;
@@ -14,20 +15,19 @@ a {
 }
 
 .cs {
-    width: 1200px;
+    width: 850px;
     margin: 0 auto;
 }
 .header {
     height: 42px;
     margin: 30px auto;
-    background-color: lightgray;
 }
 
 .header .logo {
     float: left;
-    width: 198px;
+    width: 108px;
     height: 42px;
-    background-color: lightblue;
+    background: lightskyblue;
 }
 .header .nav {
     float: left;
@@ -69,5 +69,43 @@ a {
     height: 30px;
     margin: 4px 0;
     background: url('../images/search-icon.png') no-repeat center/40px 30px;
+}
+
+.header .user {
+    float: right;
+    height: 42px;
+    line-height: 42px;
+}
+
+.bg-section {
+    height: 200px;
+    background-color: lightblue;
+}
+
+.bg-section .nav-list {
+    float: left;
+    width: 120px;
+    height: 200px;
+    background-color: lightgreen;
+}
+
+.bg-section .banner {
+    width: 850px;
+    height: 200px;
+    background-color: lightskyblue;
+}
+
+.bg-section .sub-nav {
+    float: left;
+    width: 80px;
+    height: 120px;
+    background-color: lightgreen;
+}
+
+.bg-section .my-courses {
+    float: right;
+    width: 80px;
+    height: 120px;
+    background-color: lightgreen;
 }
 
