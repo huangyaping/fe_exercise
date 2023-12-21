@@ -86,7 +86,7 @@ a {
     float: left;
     width: 120px;
     height: 200px;
-    background-color: lightgreen;
+    background-color: rgba(0,0,0,.1);
 }
 
 .bg-section .banner {
@@ -109,3 +109,16 @@ a {
     background-color: lightgreen;
 }
 
+.bg-section .nav-list li {
+    margin: 10px 10px;
+}
+.bg-section .nav-list li a {
+    font-size: 14px;
+    color: white;
+}
+.bg-section .nav-list li a span {
+    float: right;
+}
+.bg-section .nav-list li a:hover {
+    color: blue;
+}
