@@ -6,8 +6,9 @@
     <title>css</title>
     <style type="text/css">
         .main {
-            width: 200px;
-            height: 200px;
+            position: relative;
+            width: 600px;
+            height: 2000px;
             margin: 0 auto;
             background: lightskyblue;
         }
@@ -19,16 +20,28 @@
             height: 100px;
             background: lightcyan;
         }
+        .side-menu {
+            position: fixed;
+            left: 50%;
+            top: 100px;
+            margin-left: 300px;
+            width: 100px;
+            height: 100px;
+            background: lightpink;
+        }
     </style>
 </head>
 <body>
     
-    <div class="main">
-        main
-    </div>
-
     <div class="cookie-popup">
         cookie
+    </div>
+
+    <div class="main">
+        main
+        <div class="side-menu">
+            side menu
+        </div>
     </div>
 
 </body>
