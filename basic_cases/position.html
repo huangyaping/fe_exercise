@@ -8,12 +8,12 @@
         .main {
             position: relative;
             width: 600px;
-            height: 2000px;
+            height: 300px;
             margin: 0 auto;
             background: lightskyblue;
         }
         .cookie-popup {
-            position: absolute;
+            position: fixed;
             left: 10px;
             bottom: 10px;
             width: 100px;
@@ -29,12 +29,43 @@
             height: 100px;
             background: lightpink;
         }
+        .side-ads {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 100px;
+            height: 100px;
+            background: lightgray;
+        }
+
+        .v-img {
+            margin: 0 auto;
+            width: 400px;
+            height: 300px;
+            position: relative;
+        }
+        .v-img img {
+            width: 100%;
+            height: 100%;
+        }
+        .v-shade {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0, .4) url(../images/search-icon.png) no-repeat center;
+        }
+        .v-img:hover .v-shade {
+            display: block;
+        }
     </style>
 </head>
 <body>
     
-    <div class="cookie-popup">
-        cookie
+    <div class="side-ads">
+        side ads
     </div>
 
     <div class="main">
@@ -42,6 +73,15 @@
         <div class="side-menu">
             side menu
         </div>
+    </div>
+
+    <div class="cookie-popup">
+        cookie
+    </div>
+
+    <div class="v-img">
+        <div class="v-shade"></div>
+        <img src="../images/sunflower.jpg">
     </div>
 
 </body>
