@@ -14,7 +14,7 @@
         }
         .cookie-popup {
             position: fixed;
-            left: 10px;
+            right: 10px;
             bottom: 10px;
             width: 100px;
             height: 100px;
@@ -28,6 +28,16 @@
             width: 100px;
             height: 100px;
             background: lightpink;
+        }
+        .side-menu span {
+            position: absolute;
+            left: 50%;
+            top: -21px;
+            margin-left: -10px;
+            border-top: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-bottom: 10px solid lightpink;
         }
         .side-ads {
             position: absolute;
@@ -60,6 +70,13 @@
         .v-img:hover .v-shade {
             display: block;
         }
+        .d-sprites a {
+            display: block;
+            width: 60px;
+            height: 60px;
+/*            background: url(../images/search-icon.png) no-repeat center;*/
+            background: url(../images/pvp-sprites.png) no-repeat -182px 0;
+        }
     </style>
 </head>
 <body>
@@ -70,9 +87,10 @@
 
     <div class="main">
         main
-        <div class="side-menu">
-            side menu
-        </div>
+    </div>
+    <div class="side-menu">
+        side menu
+        <span></span>
     </div>
 
     <div class="cookie-popup">
@@ -84,5 +102,8 @@
         <img src="../images/sunflower.jpg">
     </div>
 
+    <div class="d-sprites">
+        <a href="#"></a>
+    </div>
 </body>
 </html>
