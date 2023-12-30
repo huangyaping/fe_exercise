@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>news</title>
+    <style type="text/css">
+
+        @keyframes a-lottery {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .a-img {
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 200px;
+
+/*            animation: a-lottery infinite linear;*/
+        }
+        .a-img > img {
+            vertical-align: middle;
+        }
+        .a-img:hover {
+            transform: rotate(3600deg) ;
+            transition: all 5s ease;
+        }
+
+        .same-origin {
+            position: relative;
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+        }
+        .same-origin > .origin {
+            width: 0;
+            height: 0;
+            border: 3px solid blue;
+            border-radius: 50%;
+        }
+        .same-origin > div[class^="pulse"] {
+            width: 10px;
+            height: 10px;
+            border: 2px solid blue;
+            border-radius: 50%;
+            animation: a-pulse 0.8s linear infinite;
+        }
+        .same-origin > .pulse2 {
+            animation-delay: 0.3s !important;
+        }
+        .same-origin > div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px blue;
+        }
+        @keyframes a-pulse {
+            0% {
+                width: 10px;
+                height: 10px;
+                opacity: 1;
+            }
+            40% {
+                width: 40px;
+                height: 40px;
+                opacity: 0.8;
+            }
+            70% {
+                width: 70px;
+                height: 70px;
+                opacity: 0.3;
+            }
+            100% {
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        function startLottery() {
+            let p = 10;
+            var ai = 1;
+            let a_img = document.getElementsByClassName('a-img')[0];
+            /*a_img.style.animationDuration=(1/p)+'s';
+            a_img.addEventListener("animationiteration", () => {
+                a_img.style.animationDuration=((++ai)/p)+'s';
+            });*/
+            for (let i = 1; i <= p; i++) {
+
+                setTimeout(function() {
+                    console.log(i/p);
+                    document.getElementsByClassName('a-img')[0].style.animationDuration=(i/p)+'s';
+                }, (1000+(i-1)*500));
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="a-img">
+        <img src="../images/compass-needle.png">
+    </div>
+    <button onclick="startLottery()">start</button>
+
+    <div class="same-origin">
+        <div class="origin"></div>
+        <div class="pulse1"></div>
+        <div class="pulse2"></div>
+    </div>
+</body>
+</html>

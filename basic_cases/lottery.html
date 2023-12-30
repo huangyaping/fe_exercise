@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>lottery</title>
+    <style type="text/css">
+
+        @keyframes a-lottery {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(3600deg);
+            }
+        }
+        .a-img {
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 200px;
+        }
+        .a-img > img {
+            vertical-align: middle;
+        }
+        .a-img:hover {
+            /*transform: rotate(3600deg) ;
+            transition: all 5s ease;*/
+            animation: a-lottery 5s ease;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function startLottery() {
+            
+        }
+    </script>
+</head>
+<body>
+
+    <div class="a-img">
+        <img src="../images/compass-needle.png">
+    </div>
+    <button onclick="startLottery()">start</button>
+
+</body>
+</html>

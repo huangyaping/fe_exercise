@@ -77,6 +77,38 @@
 /*            background: url(../images/search-icon.png) no-repeat center;*/
             background: url(../images/pvp-sprites.png) no-repeat -182px 0;
         }
+
+        .same-origin {
+            position: relative;
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+        }
+        .same-origin > .origin {
+            width: 0;
+            height: 0;
+            border: 5px solid blue;
+            border-radius: 50%;
+        }
+        .same-origin > .pulse1 {
+            width: 20px;
+            height: 20px;
+            border: 2px solid blue;
+            border-radius: 50%;
+        }
+        .same-origin > .pulse2 {
+            width: 40px;
+            height: 40px;
+            border: 2px solid blue;
+            border-radius: 50%;
+        }
+        .same-origin > div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 5px blue;
+        }
     </style>
 </head>
 <body>
@@ -87,6 +119,11 @@
 
     <div class="main">
         main
+        <div class="same-origin">
+            <div class="origin"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+        </div>
     </div>
     <div class="side-menu">
         side menu
