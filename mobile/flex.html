@@ -54,6 +54,17 @@
         .nav > .nav-item:nth-child(-n+2) {
             border-right: 1px solid #fff;
         }
+
+        .subnav {
+            display: flex;
+            flex-flow: row wrap;
+            width: 200px;
+            height: 100px;
+            background: lightgreen;
+        }
+        .subnav > .subnav-item {
+            flex: 50%;
+        }
         
     </style>
 </head>
@@ -63,6 +74,13 @@
         <div class="nav-item">1</div>
         <div class="nav-item">2</div>
         <div class="nav-item">3</div>
+    </div>
+
+    <div class="subnav">
+        <div class="subnav-item">1</div>
+        <div class="subnav-item">2</div>
+        <div class="subnav-item">3</div>
+        <div class="subnav-item">4</div>
     </div>
 
     <div class="dice one">
