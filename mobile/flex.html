@@ -40,9 +40,30 @@
             border: 5px solid lightgreen;
             border-radius: 50%;
         }
+
+        .nav {
+            display: flex;
+            width: 300px;
+            height: 100px;
+            background: lightpink;
+        }
+        .nav > .nav-item {
+            flex: 1;
+            height: 100px;
+        }
+        .nav > .nav-item:nth-child(-n+2) {
+            border-right: 1px solid #fff;
+        }
+        
     </style>
 </head>
 <body>
+
+    <div class="nav">
+        <div class="nav-item">1</div>
+        <div class="nav-item">2</div>
+        <div class="nav-item">3</div>
+    </div>
 
     <div class="dice one">
         <span>1</span>
