@@ -38,6 +38,22 @@
             background-color: gray;
             color: #fff;
         }
+
+        main .bignews {
+            height: 160px;
+        }
+        main .bignews li, img {
+            float: left;
+            height: 80px;
+            border: 1px solid #ccc;
+            margin-left: -1px;
+        }
+        main .bignews li:nth-child(1) {
+            height: 160px;
+        }
+        main .news {
+            background-color: lightcoral;
+        }
     </style>
 </head>
 <body>
@@ -60,13 +76,16 @@
                 </div>
             </nav>
             <main class="col-md-8">
-                <ul>
-                    <li><a href="#"><img src="../images/cat_icon.png"></a></li>
-                    <li><a href="#"><img src="../images/cat_icon.png"></a></li>
-                    <li><a href="#"><img src="../images/cat_icon.png"></a></li>
-                    <li><a href="#"><img src="../images/cat_icon.png"></a></li>
-                    <li><a href="#"><img src="../images/cat_icon.png"></a></li>
-                </ul>
+                <div class="bignews">
+                    <ul>
+                        <li class="col-md-6"><a href="#"><img src="../images/cat_icon.png"></a></li>
+                        <li class="col-md-3"><a href="#"><img src="../images/cat_icon.png"></a></li>
+                        <li class="col-md-3"><a href="#"><img src="../images/cat_icon.png"></a></li>
+                        <li class="col-md-3"><a href="#"><img src="../images/cat_icon.png"></a></li>
+                        <li class="col-md-3"><a href="#"><img src="../images/cat_icon.png"></a></li>
+                    </ul>
+                </div>
+                <div class="news">news</div>
             </main>
             <aside class="col-md-2">aside</aside>
         </div>
