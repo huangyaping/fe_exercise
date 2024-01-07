@@ -16,8 +16,12 @@
             margin-left: 0;
             padding-left: 0;
         }
+        .logo {
+            background-color: #ccc;
+        }
         .logo img {
             width: 100%;
+            max-height: 80px;
         }
         ul, li {
             margin: 0;
@@ -40,19 +44,33 @@
         }
 
         main .bignews {
+            margin-bottom: 10px;
             height: 160px;
         }
-        main .bignews li, img {
+        main .bignews li {
             float: left;
             height: 80px;
-            border: 1px solid #ccc;
-            margin-left: -1px;
         }
         main .bignews li:nth-child(1) {
             height: 160px;
         }
+        main .bignews img {
+            width: 100%;
+            height: 100%;
+        }
         main .news {
-            background-color: lightcoral;
+            border-top: 1px solid #ccc;
+        }
+        main .news .row {
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        aside a img {
+            width: 100%;
+        }
+        aside .hots {
+            margin-top: 10px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -85,9 +103,39 @@
                         <li class="col-md-3"><a href="#"><img src="../images/cat_icon.png"></a></li>
                     </ul>
                 </div>
-                <div class="news">news</div>
+                <div class="news">
+                    <div class="row">
+                        <div class="col-md-8 news-content">
+                            <h3>title</h3>
+                            <p>published from</p>
+                            <p>description</p>
+                            <p>comment</p>
+                        </div>
+                        <div class="col-md-4 news-img">
+                            <a href="#"><img src="../images/cat_icon.png"></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 news-content">
+                            <h3>title</h3>
+                            <p>published from</p>
+                            <p>description</p>
+                            <p>comment</p>
+                        </div>
+                        <div class="col-md-4 news-img">
+                            <a href="#"><img src="../images/cat_icon.png"></a>
+                        </div>
+                    </div>
+                </div>
             </main>
-            <aside class="col-md-2">aside</aside>
+            <aside class="col-md-2">
+                <a href="#"><img src="../images/sunflower.jpg"></a>
+                <div class="hots">
+                    <span>hots</span>
+                    <h4><a href="#">ttttttttt</a></h4>
+                    <p>pppppp</p>
+                </div>
+            </aside>
         </div>
     </div>
 </body>
