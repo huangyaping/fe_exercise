@@ -65,10 +65,41 @@
         .subnav > .subnav-item {
             flex: 50%;
         }
+
+        .chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            width: 200px;
+            height: 200px;
+            border: 1px solid green;
+            margin: 50px;
+        }
+        .chart .chart-item {
+            width: 50px;
+            margin-bottom: -20px;
+        }
+        .chart .chart-item div {
+            height: 100px;
+            background: lightgreen;
+        }
         
     </style>
 </head>
 <body>
+
+    <div class="chart">
+        <div class="chart-item">
+            <em>100</em>
+            <div></div>
+            <i>q1</i>
+        </div>
+        <div class="chart-item">
+            <em>100</em>
+            <div></div>
+            <i>q1</i>
+        </div>
+    </div>
 
     <div class="nav">
         <div class="nav-item">1</div>
