@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>js form</title>
+</head>
+<body>
+    <input type="radio" name="radio" id="radio">radio
+    <input type="checkbox" name="checkbox" id="checkbox">checkbox
+    <select name="select" id="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+
+    <script>
+        // document.getElementById('radio').checked;
+        document.querySelector('input[type="radio"]').checked = true;
+        document.querySelector('input[type="checkbox"]').checked = true;
+        document.querySelector('input[type="checkbox"]').checked = false;
+        document.querySelector('select').children[1].selected = true;
+        document.querySelector('select').selectedOptions[0].value;
+    </script>
+</body>
+</html>
