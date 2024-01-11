@@ -4,17 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <title>js dom</title>
-    <script>
-    </script>
 </head>
 <body>
-    <ul>
+    <ul data-myid="1" data-my-hyphen="hyphen">
         <li>1</li>
         <li>2</li>
     </ul>
-    <select name="ss" id="">
-        <option value="1">1</option>
-        <option value="2">2</option>
-    </select>
+    <script>
+        const cul = document.querySelector('ul');
+        console.log(cul.dataset.myid);
+        console.log(cul.dataset.myHyphen);
+    </script>
 </body>
 </html>
