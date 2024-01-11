@@ -16,6 +16,9 @@
 * obj.prop-name
 
 ## iteration
-- for in
-- for of
+* for in
+* for of
+
+## performance
+* dom selector
 

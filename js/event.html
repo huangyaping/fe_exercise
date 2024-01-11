@@ -4,6 +4,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <title>js event</title>
+    <style>
+        .gf {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            background-color: lightgray;
+        }
+        .f {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+        .s {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
     <input type="radio" name="radio" id="radio">radio
@@ -14,6 +32,12 @@
         <option value="3">3</option>
     </select>
     <input type="text" name="text" id="">
+
+    <div class="gf">
+        <div class="f">
+            <div class="s"></div>
+        </div>
+    </div>
 
     <script>
         document.querySelector('input[type="radio"]').checked = true;
@@ -28,7 +52,18 @@
                 if(e.key=='Enter') {
                     document.querySelector('select').children[1].selected = true;
                 }
+                console.log(this.value);
             });
+        document.querySelector('.gf').addEventListener('mousedown', e => {
+            console.log('gf');
+            e.stopPropagation();
+        })
+        document.querySelector('.f').addEventListener('mousedown', e => {
+            console.log(Object.prototype.toString.call(e));
+            console.log(Object.prototype.toString.call(e.target));
+            tt=e.target;
+            e.stopPropagation();
+        })
     </script>
 </body>
 </html>
