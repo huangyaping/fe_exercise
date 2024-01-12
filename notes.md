@@ -4,6 +4,12 @@
 * border
 - `margin-left: -1px`
 - a chess board
+* coordinate
+- pageX
+- offsetY
+- offsetTop
+- scrollTop
+
 
 ## string
 * nested templates
