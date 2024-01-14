@@ -32,7 +32,9 @@
         }
 
         .slide-item {
+            width: 250px;
             float: left;
+            transform: translateX(-250px);
             transition: all 0.5s;
         }
 
@@ -48,18 +50,41 @@
 <body>
     <div class="slide">
         <div>
-            <ul>
-                <li class="slide-item"><img src="../images/nature-1.jpg"></li>
-                <li class="slide-item"><img src="../images/nature-2.jpg"></li>
-                <li class="slide-item"><img src="../images/nature-3.jpg"></li>
+            <ul id="slide-ul">
+                <li class="slide-item"><img src="../images/nature-1.jpg" alt=""></li>
+                <li class="slide-item"><img src="../images/nature-2.jpg" alt=""></li>
+                <li class="slide-item"><img src="../images/nature-3.jpg" alt=""></li>
             </ul>
         </div>
     </div>
     <script>
+        let idx = 0;
+        let oa = [-250, -250, -250];
+        let tc = true;
+        let transitionCompleted = function () {
+            tc = true;
+        }
+        for (let item of document.getElementsByClassName('slide-item')) {
+            item.addEventListener('transitionend', transitionCompleted);
+        }
+        document.getElementById('slide-ul').insertBefore(document.getElementsByClassName('slide-item')[2], document.getElementsByClassName('slide-item')[0]);
+
+
         function next() {
-            const items = document.getElementsByClassName('slide-item');
-            items[0].style.transform = 'translateX(-500px)';
-            items[1].style.transform = 'translateX(-250px)';
+            if (tc) {
+                tc = false;
+                const items = document.getElementsByClassName('slide-item');
+                for (let i = 0; i < items.length; i++) {
+                    let item = items[i];
+                    item.style.opacity = 1;
+                    item.style.transform = `translateX(${oa[i] - 250}px)`;
+                    oa[i] -= 250;
+                }
+                items[idx].style.opacity = 0;
+                items[idx].style.transform = `translateX(${(250 * items.length) + oa[idx]}px)`;
+                oa[idx] = (250 * items.length) + oa[idx];
+                idx = (idx + 1) % items.length;
+            }
         }
     </script>
 </body>
