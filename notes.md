@@ -10,6 +10,9 @@
 - offsetTop
 - scrollTop
 
+## animation
+* carousel
+- loop seamlessly
 
 ## string
 * nested templates
