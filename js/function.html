@@ -6,8 +6,18 @@
     <title>js array</title>
     <script>
         (function foo(a) {
-            console.log(a)
+            console.log('immidate function');
         })(10);
+
+        function update(a) {
+            console.log(`before:${a}`);
+            arguments[0] = 23;
+            console.log(`after:${a}`);
+        }
+
+        function testRest(m, ...arr) {
+            arr.forEach(a => console.log(m*a));
+        }
     </script>
 </head>
 <body>
