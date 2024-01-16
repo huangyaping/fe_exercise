@@ -18,6 +18,26 @@
         function testRest(m, ...arr) {
             arr.forEach(a => console.log(m*a));
         }
+
+        const returnValue = {
+            code: 0,
+            msg: "ok",
+            data: {
+                a: 123,
+                cc: "abc"
+            }
+        };
+
+        function render1({data}) {
+            console.log(`render1, data=${JSON.stringify(data)}`);
+        }
+        render1(returnValue);
+
+        function render2({code, data}) {
+            console.log(`render2, code=${code}, data=${JSON.stringify(data)}`);
+        }
+        render2(returnValue);
+
     </script>
 </head>
 <body>
