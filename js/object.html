@@ -10,12 +10,45 @@
             name: 'po',
             
             log: function() {
-                console.log(`id=${this.id}, name=${this.name}`);
+                console.log(`log, id=${this.id}, name=${this.name}`);
+            },
+            
+            log2() {
+                console.log(`log2, id=${this.id}, name=${this.name}`);
             }
         }
         
-        // document.write(abc);
-        // document.write("<br/>");
+        function ConstructorFunction(id, name) {
+            this.id = id;
+            this.name = name;
+
+            function f1() {
+                console.log(`f1, id=${this.id}, name=${this.name}`);
+            }
+
+        }
+
+        function showOwn1(obj) {
+            for(k in obj) {
+                if(Object.hasOwn(obj, k)) {
+                    console.log(k);
+                }
+            }
+        }
+        function showOwn2(obj) {
+            Object.keys(obj).forEach(k => {
+                console.log(k);
+            });
+        }
+        function showAll(obj) {
+            let result = [];
+            let objInspect = obj;
+            while(objInspect != null) {
+                result.push(...Object.getOwnPropertyNames(objInspect));
+                objInspect = Object.getPrototypeOf(objInspect);
+            }
+            console.log(result);
+        }
     </script>
 </head>
 <body>
