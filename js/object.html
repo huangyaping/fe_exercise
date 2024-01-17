@@ -18,29 +18,19 @@
             }
         }
         
-        function ConstructorFunction(id, name) {
-            this.id = id;
-            this.name = name;
-
-            function f1() {
-                console.log(`f1, id=${this.id}, name=${this.name}`);
-            }
-
-        }
-
-        function showOwn1(obj) {
+        function forin_Object_hasOwn(obj) {
             for(k in obj) {
                 if(Object.hasOwn(obj, k)) {
                     console.log(k);
                 }
             }
         }
-        function showOwn2(obj) {
+        function Object_keys(obj) {
             Object.keys(obj).forEach(k => {
                 console.log(k);
             });
         }
-        function showAll(obj) {
+        function getOwnPropertyNames_prototype(obj) {
             let result = [];
             let objInspect = obj;
             while(objInspect != null) {
