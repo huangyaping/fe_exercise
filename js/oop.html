@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>js object</title>
+    <script>
+        const poPrototype = {
+            log: function() {
+                console.log(`log, id=${this.id}, name=${this.name}`);
+            },
+            
+            log2() {
+                console.log(`log2, id=${this.id}, name=${this.name}`);
+            }
+        }
+        const po = {
+            id: 1,
+            name: 'po',
+            __proto__ : poPrototype
+        }
+        
+        function ConstructorFunction(id, name) {
+            this.id = id;
+            this.name = name;
+
+            this.log = function() {
+                console.log(`log, id=${this.id}, name=${this.name}`);
+            }
+        }
+
+        let cf1 = new ConstructorFunction(1, "Jhon");
+        cf1.log();
+        let cf2 = new ConstructorFunction(2, "Bay");
+        cf2.log();
+
+        ConstructorFunction.staticMethod = function() {
+            console.log(`staticMethod, id=${this.id}, name=${this.name}`);
+        }
+
+        ConstructorFunction.prototype.instanceMethod = function() {
+            console.log(`instanceMethod, id=${this.id}, name=${this.name}`);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
