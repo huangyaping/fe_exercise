@@ -45,6 +45,10 @@
         function Base(){}
         function Derived(){}
         Object.setPrototypeOf(Derived.prototype, Base.prototype);
+        /* same as
+        function Base(){}
+        class Derived extends Base {}
+        */
         const obj = new Derived();
         // obj --> Derived.prototype --> Base.prototype --> Object.prototype
     </script>
