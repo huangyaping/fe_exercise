@@ -6,7 +6,7 @@
     <title>js array</title>
     <script>
         (function foo(a) {
-            console.log('immidate function');
+            console.log('immediate function');
         })(10);
 
         function update(a) {
@@ -38,6 +38,16 @@
         }
         render2(returnValue);
 
+        function testThis() {
+            console.log(`this:${this}`);
+        }
+
+        function testArrowFunction(arrowFunction) {
+            arrowFunction();
+        }
+        function testArrowFunctionThis(arrowFunction) {
+            arrowFunction.apply(document);
+        }
     </script>
 </head>
 <body>
