@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>js defineProperty</title>
+    <script>
+        const obj = {};
+        const obj2 = {
+            k1: 0
+        };
+        Object.defineProperty(obj, 'k1', {
+            get() {
+                return obj2.k1;
+            },
+            set(nv) {
+                console.log(this+':setter');
+                obj2.k1 = nv;
+            }
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
