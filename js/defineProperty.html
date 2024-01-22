@@ -5,19 +5,24 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <title>js defineProperty</title>
     <script>
-        const obj = {};
-        const obj2 = {
+        const vm = {};
+        const __data = {
             k1: 0
         };
-        Object.defineProperty(obj, 'k1', {
-            get() {
-                return obj2.k1;
-            },
-            set(nv) {
-                console.log(this+':setter');
-                obj2.k1 = nv;
+        for (const k in __data) {
+            if (Object.hasOwnProperty.call(__data, k)) {
+                const v = __data[k];
+                Object.defineProperty(vm, k, {
+                    get() {
+                        return __data[k];
+                    },
+                    set(nv) {
+                        console.log(this+':setter');
+                        __data[k] = nv;
+                    }
+                });
             }
-        });
+        }
     </script>
 </head>
 <body>
