@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>js object</title>
+    <script>
+
+        function async(callback) {
+            setTimeout(()=>callback('success'), 1000);
+        }
+        function MyPromise(af) {
+            this.af = af;
+            this.arr = [af];
+            this.callback = null;
+        }
+        MyPromise.prototype.then = function(callback) {
+            const cur = this.arr.shift();
+            this.arr.push(callback);
+            new MyPromise(function(resolve) {
+            })
+            cur(function() {
+                then(callback);
+            });
+        }
+        const mp = new MyPromise(
+            function(callback) {
+                async(callback);
+            }
+        );
+        mp.then(console.log);
+
+        const preloadImage = function (path) {
+            return new MyPromise(function (resolve) {
+                var image = new Image();
+                image.onload  = resolve;
+                image.onerror = reject;
+                image.src = path;
+            });
+        };
+        preloadImage('https://example.com/my.jpg')
+        .then(function (e) { document.body.append(e.target) })
+        .then(function () { console.log('加载成功') });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

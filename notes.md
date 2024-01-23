@@ -31,3 +31,7 @@
 ## performance
 * dom selector
 
+## async
+* sequential exection of multiple asynchronous functions
+
+

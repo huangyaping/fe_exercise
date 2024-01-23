@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>js object</title>
+    <script>
+
+        function async(callback) {
+            setTimeout(()=>callback('success'), 1000);
+        }
+        /**
+        new MyPromise(function(callback) {
+            if(success) {
+                callback(value);
+            }
+        });
+        **/
+        function MyPromise(as) {
+            this.as = as;
+            this.tf = null;
+        }
+        MyPromise.prototype.run = function() {
+            this.as(this.tf);
+        }
+        MyPromise.prototype.then = function(f) {
+            this.tf = f;
+        }
+        const timeoutPromise = new MyPromise(function(callback) {
+            setTimeout(()=>callback(Date.now()), 1000);
+        });
+        timeoutPromise.then(console.log);
+        timeoutPromise.run();
+
+        const mp = new MyPromise(
+            function(callback) {
+                async(callback);
+            }
+        );
+        mp.then(console.log);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
