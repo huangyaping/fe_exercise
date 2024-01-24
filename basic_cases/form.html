@@ -30,5 +30,23 @@
             <tr><td></td><td><ul><li>a</li><li>b</li></ul></td></tr>
         </tbody>
     </form></table>
+  <input type="file" onchange="previewFile()">
+  <img src="" height="200">
+
+    <script>
+        function previewFile() {
+        var preview = document.querySelector('img');
+        var file    = document.querySelector('input[type=file]').files[0];
+        var reader  = new FileReader();
+
+        reader.addEventListener('load', function () {
+            preview.src = reader.result;
+        }, false);
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+        }
+    </script>
 </body>
 </html>

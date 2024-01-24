@@ -11,17 +11,18 @@
         }
         function MyPromise(af) {
             this.af = af;
-            this.arr = [af];
+            this.arr = [];
+            this.arr.push(af);
             this.callback = null;
         }
-        MyPromise.prototype.then = function(callback) {
+        MyPromise.prototype.run = function() {
+            console.log(this.arr.join(','));
             const cur = this.arr.shift();
+            console.log(cur);
+            cur(this.run);
+        }
+        MyPromise.prototype.then = function(callback) {
             this.arr.push(callback);
-            new MyPromise(function(resolve) {
-            })
-            cur(function() {
-                then(callback);
-            });
         }
         const mp = new MyPromise(
             function(callback) {
@@ -30,6 +31,7 @@
         );
         mp.then(console.log);
 
+        /**
         const preloadImage = function (path) {
             return new MyPromise(function (resolve) {
                 var image = new Image();
@@ -41,7 +43,7 @@
         preloadImage('https://example.com/my.jpg')
         .then(function (e) { document.body.append(e.target) })
         .then(function () { console.log('加载成功') });
-
+        **/
     </script>
 </head>
 <body>
