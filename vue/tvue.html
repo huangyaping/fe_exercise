@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>test vue</title>
+    <script src="vue.js"></script>
+    <style>
+        .isdelete {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <span v-once>{{change()}}</span>
+        <ul>
+            <todo-item :title="'first'" :isdelete="true"></todo-item>
+            <todo-item :title="'second'" :isdelete="false"></todo-item>
+        </ul>
+        <ul>
+            <todo-item v-for="grocery in groceryList" :key="grocery.name" 
+                :title="grocery.name" :isdelete="grocery.isdelete"></todo-item>
+        </ul>
+
+        <navigation-link url="/p">
+            <span>icon</span>
+        </navigation-link>
+    </div>
+    <script>
+        Vue.component('todo-item', {
+            props: {
+                title: String,
+                isdelete: Boolean
+            },
+            data: function() {
+                return {}
+            },
+            methods: {
+                del() {
+                }
+            },
+            template: `
+            <li :class="{isdelete: isdelete}">
+                {{title}}
+                <button @click="del">delete</button>
+            </li>
+            `
+        });
+
+        Vue.component('navigation-link', {
+            props: ['url'],
+            template: `
+            <a :href="url">
+                aaa
+                <slot></slot>
+            </a>
+            `
+        });
+
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'hi',
+                groceryList: [
+                    {name: 'peanuts', amount: 3, isdelete: true},
+                    {name: 'apple', amount: 4, isdelete: false},
+                ]
+            },
+            methods: {
+                change() {
+                    console.log('change'+this.msg);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
