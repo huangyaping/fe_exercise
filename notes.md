@@ -34,4 +34,6 @@
 ## async
 * sequential exection of multiple asynchronous functions
 
-
+## module
+* import declarations may only appear at top level of a module
+* Cannot use import statement outside a module
