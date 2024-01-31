@@ -37,3 +37,18 @@
 ## module
 * import declarations may only appear at top level of a module
 * Cannot use import statement outside a module
+
+## es6
+* let, const
+* template string
+* destructing
+* spread syntax
+* for of
+* Set, Map
+* Promise
+* async/await
+* class
+* module
+
+
+
