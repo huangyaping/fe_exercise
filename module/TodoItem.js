@@ -8,3 +8,7 @@ TodoItem.prototype.done = function() {
 }
 
 export {TodoItem};
+
+export function sum(a, b) {
+    return a+b;
+}

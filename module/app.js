@@ -1,4 +1,4 @@
-import { TodoItem } from "./TodoItem.js"
+import { TodoItem, sum } from "./TodoItem.js"
 
 const tl = [
     new TodoItem('write requirement document'),
@@ -8,3 +8,4 @@ const tl = [
 for (const item of tl) {
     console.log(item);
 }
+console.log(sum(1,2));
